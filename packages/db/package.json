@@ -1,0 +1,22 @@
+{
+  "name": "@idp/db",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --build",
+    "migrate": "node --env-file-if-exists=../../.env dist/migrate.js",
+    "seed": "node --env-file-if-exists=../../.env dist/seed.js"
+  },
+  "dependencies": {
+    "@idp/domain": "0.1.0",
+    "@idp/github": "0.1.0",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/pg": "^8.11.10"
+  }
+}

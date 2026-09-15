@@ -1,0 +1,22 @@
+{
+  "name": "@idp/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/server.js",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "node --env-file-if-exists=../../.env dist/server.js",
+    "test": "node --test dist/app.test.js dist/docker-runner.test.js"
+  },
+  "dependencies": {
+    "@idp/db": "0.1.0",
+    "@idp/domain": "0.1.0",
+    "@idp/github": "0.1.0",
+    "fastify": "^5.2.1",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5"
+  }
+}

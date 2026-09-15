@@ -1,0 +1,32 @@
+:root {
+  color: #e8edf5;
+  background: #111827;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+body { margin: 0; }
+
+main { max-width: 1100px; margin: 8vh auto; padding: 0 24px; }
+
+.eyebrow { color: #79c0ff; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+
+h1 { font-size: clamp(2rem, 6vw, 4rem); margin: 0 0 24px; }
+
+h2 { margin-top: 0; font-size: 1.15rem; }
+
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+section { background: #1f2937; border: 1px solid #374151; border-radius: 12px; padding: 20px; }
+
+section p { border-top: 1px solid #374151; line-height: 1.55; padding-top: 12px; }
+
+.badge { border-radius: 999px; display: inline-block; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; text-transform: uppercase; }
+
+.succeeded, .healthy, .info { background: #123d27; color: #7ee787; }
+.failed, .unhealthy, .error { background: #4a1720; color: #ff9b9b; }
+.running, .degraded, .warn { background: #4c3510; color: #f2cc60; }
+.queued, .cancelled, .skipped, .unknown, .debug { background: #30363d; color: #c9d1d9; }
+.error { border-radius: 8px; padding: 16px; }
+button { background: #238636; border: 0; border-radius: 6px; color: white; cursor: pointer; margin-top: 8px; padding: 6px 10px; }
+
+.status { background: #3fb950; border-radius: 50%; display: inline-block; height: 10px; margin-right: 8px; width: 10px; }

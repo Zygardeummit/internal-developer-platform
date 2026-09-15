@@ -1,0 +1,22 @@
+{
+  "name": "internal-developer-platform",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run build && npm run test --workspaces --if-present",
+    "typecheck": "tsc --build",
+    "start:api": "npm run build && npm run start --workspace=@idp/api",
+    "start": "npm run start:api",
+    "start:web": "npm run dev --workspace=@idp/web",
+    "db:migrate": "npm run migrate --workspace=@idp/db",
+    "db:seed": "npm run seed --workspace=@idp/db"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
